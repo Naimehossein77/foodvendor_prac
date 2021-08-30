@@ -113,6 +113,10 @@ class _OpenCloseBottomSheetState extends State<OpenCloseBottomSheet> {
                         ),
                       )),
                 ),
+              if (!widget.isBusy)
+                SizedBox(
+                  height: 10,
+                ),
               if (!widget.isOpen)
                 InkWell(
                   onTap: () {
@@ -163,9 +167,10 @@ class _OpenCloseBottomSheetState extends State<OpenCloseBottomSheet> {
                         ),
                       )),
                 ),
-              SizedBox(
-                height: 10,
-              ),
+              if (!widget.isOpen)
+                SizedBox(
+                  height: 10,
+                ),
               if (!widget.isClosed)
                 InkWell(
                   onTap: () {
