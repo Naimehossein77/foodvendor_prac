@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:foodvendor/Provider/opencloseBottomSheetProvider.dart';
+import 'package:foodvendor/Provider/openCloseBottomSheetProvider.dart';
 import 'package:foodvendor/View/home.dart';
 import 'package:path/path.dart';
 import 'package:provider/provider.dart';
+
+import 'Provider/currentPageProvider.dart';
 
 void main() {
   runApp(
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => OpenCloseRestaurant()),
+        ChangeNotifierProvider(create: (context) => CurrentPage()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

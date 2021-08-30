@@ -1,11 +1,13 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:foodvendor/Provider/currentPageProvider.dart';
 import 'package:foodvendor/Widget/customText.dart';
 import 'package:foodvendor/constants.dart';
+import 'package:provider/provider.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key key}) : super(key: key);
-  
+
   @override
   Widget build(BuildContext context) {
     final mwidth = MediaQuery.of(context).size.width;
@@ -38,13 +40,16 @@ class MyDrawer extends StatelessWidget {
               height: 30,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                context.read<CurrentPage>().changeCurrentPage(0);
+                Navigator.pop(context);
+              },
               child: Container(
                 padding: EdgeInsets.only(left: 15.0),
                 height: mheight * .07,
                 alignment: Alignment.centerLeft,
                 child: CustomText(
-                  text: 'Orders OVerview',
+                  text: 'Orders Overview',
                   fontWeight: FontWeight.w500,
                 ),
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodvendor/Provider/opencloseBottomSheetProvider.dart';
+import 'package:foodvendor/Provider/openCloseBottomSheetProvider.dart';
 import 'package:foodvendor/Widget/customText.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:path/path.dart';
